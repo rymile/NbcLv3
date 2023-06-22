@@ -8,6 +8,13 @@ LV2의 코드를 가져와서 구현했습니다.
 
 까먹기전에 구현해놓은 부분만 커밋합니다.
 
+회원가입
+localhost:3000/login/users/users (post)
+
+로그인
+localhost:3000/login/auth/auth (post)
+
+
 게시글 작성
 localhost:3000/api/posts (post)
 
