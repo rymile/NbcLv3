@@ -5,7 +5,7 @@ const authMiddleware = require("../middlewares/auth-middleware.js");
 const { Op } = require("sequelize");
 
 // 게시글 생성
-router.post("/posts", async (req, res) => {
+router.post("/posts", authMiddleware, async (req, res) => {
   const { title, content, password } = req.body;
   const post = await Posts.create({ title, content, password });
 

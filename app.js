@@ -1,14 +1,16 @@
 const express = require("express");
-const postsRouter = require("./routes/posts.route");
 const cookieParser = require("cookie-parser");
 const app = express();
 const port = 3000;
-// const connect = require("./schemas");
+const postsRouter = require("./routes/posts.route");
+const routes = require("./routes");
+const connect = require("./schemas");
+connect();
 
 app.use(express.json());
 app.use(cookieParser());
 
-// app.use("/api", routes);
+app.use("/login", routes);
 app.use("/api", [postsRouter]);
 
 app.listen(port, () => {
